@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Automation Expert | Chatbots | Voice Agents | n8n</title>
+
+    <style>
+        :root {
+            --bg-dark: #0e0e12;
+            --bg-card: #15151c;
+            --primary: #6cf2c2;
+            --secondary: #7aa2ff;
+            --text-light: #eaeaea;
+            --text-muted: #b3b3b3;
+            --border: #23232f;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(180deg, #0e0e12, #08080c);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 90px 20px;
+            text-align: center;
+            background: radial-gradient(circle at top, #1a1a28, #0e0e12);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin: 20px auto 40px;
+            font-size: 18px;
+            color: var(--text-muted);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #000;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+        }
+
+        /* ===== SERVICES ===== */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-6px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        /* ===== TECH STACK ===== */
+        .stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: center;
+        }
+
+        .stack span {
+            background: #12121a;
+            border: 1px solid var(--border);
+            padding: 10px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* ===== WHY ME ===== */
+        .why {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .why div {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid var(--border);
+        }
+
+        .why h4 {
+            margin-bottom: 8px;
+            color: var(--secondary);
+        }
+
+        /* ===== CTA ===== */
+        .final-cta {
+            text-align: center;
+            background: linear-gradient(135deg, #141421, #0e0e12);
+            border-radius: 30px;
+            padding: 60px 20px;
+            border: 1px solid var(--border);
+        }
+
+        .final-cta h2 {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .final-cta p {
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.testimonial-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.testimonial-card:hover {
+    border-color: var(--secondary);
+    transform: translateY(-5px);
+}
+
+.stars {
+    color: #ffd700;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.testimonial-text {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.client-name {
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.client-role {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>
+            AI Automations, Chatbots & Voice Agents<br>
+            <span>Built for Real Business Growth</span>
+        </h1>
+        <p>
+            I design intelligent automation systems using n8n, Zapier, Make.com, AI models and custom PHP APIs —
+            saving time, cutting costs, and scaling operations.
+        </p>
+        <a href="#contact" class="cta-btn">Let’s Build Your Automation</a>
+    </div>
+
+    <!-- SERVICES -->
+    <section>
+        <div class="section-title">
+            <h2>My Services</h2>
+            <p>End-to-end automation & AI solutions</p>
+        </div>
+
+        <div class="services">
+            <div class="service-card">
+                <h3>AI Workflow Automation</h3>
+                <p>
+                    Custom automation using n8n, Zapier & Make.com to connect CRMs, APIs,
+                    databases, AI models, and third-party tools.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>AI Chatbots</h3>
+                <p>
+                    GPT-powered chatbots for websites, WhatsApp, Telegram & internal tools.
+                    Trained on your business data with memory & logic.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Voice Agents</h3>
+                <p>
+                    AI voice agents for calls, IVR, appointment booking and lead qualification
+                    using speech-to-text & text-to-speech.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>API & Backend Development</h3>
+                <p>
+                    Secure backend systems using PHP, Node.js, REST APIs,
+                    webhooks, databases and authentication.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>CRM & Lead Automation</h3>
+                <p>
+                    Lead capture, enrichment, follow-ups and pipeline automation
+                    for sales & marketing teams.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Custom Full-Stack Apps</h3>
+                <p>
+                    Custom web dashboards and internal tools built around your automation workflows.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section>
+        <div class="section-title">
+            <h2>Tech Stack</h2>
+            <p>Tools I use to build reliable systems</p>
+        </div>
+
+        <div class="stack">
+            <span>n8n</span>
+            <span>Zapier</span>
+            <span>Make.com</span>
+            <span>OpenAI / LLMs</span>
+            <span>PHP</span>
+            <span>Node.js</span>
+            <span>REST APIs</span>
+            <span>Webhooks</span>
+            <span>MySQL</span>
+            <span>PostgreSQL</span>
+            <span>Twilio</span>
+            <span>WhatsApp APIs</span>
+        </div>
+    </section>
+
+    <!-- WHY ME -->
+    <section>
+        <div class="section-title">
+            <h2>Why Work With Me?</h2>
+            <p>Focused on business results, not just tools</p>
+        </div>
+
+        <div class="why">
+            <div>
+                <h4>Business-First Approach</h4>
+                <p>I design automations that solve real operational problems, not just technical demos.</p>
+            </div>
+
+            <div>
+                <h4>Clean & Scalable Workflows</h4>
+                <p>Well-structured automations that are easy to maintain and scale.</p>
+            </div>
+
+            <div>
+                <h4>AI + Automation Expertise</h4>
+                <p>Strong understanding of both LLMs and traditional backend systems.</p>
+            </div>
+
+            <div>
+                <h4>Clear Communication</h4>
+                <p>Regular updates, transparent logic, and documentation provided.</p>
+            </div>
+        </div>
+    </section>
+<!-- TESTIMONIALS -->
+<section>
+    <div class="section-title">
+        <h2>What Clients Say</h2>
+        <p>Trusted by businesses for AI & automation solutions</p>
+    </div>
+
+    <div class="testimonials">
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">
+                Adi completely transformed our internal workflow using n8n and AI automation.
+                What used to take hours is now fully automated. Clean logic, great communication,
+                and excellent understanding of business needs.
+            </p>
+            <div class="client-name">Michael R.</div>
+            <div class="client-role">Operations Manager, SaaS Company</div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">
+                The AI chatbot Adi built for us handles customer queries better than our support team.
+                It integrates perfectly with our CRM and saves us a huge amount of time every day.
+            </p>
+            <div class="client-name">Sarah L.</div>
+            <div class="client-role">Founder, eCommerce Brand</div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">
+                Adi’s automation skills are top-notch. From Zapier to Make.com and custom PHP APIs,
+                everything was delivered exactly as promised and well documented.
+            </p>
+            <div class="client-name">Daniel K.</div>
+            <div class="client-role">Product Lead, Tech Startup</div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">
+                We hired Adi for an AI voice agent project and the results were outstanding.
+                The system handles appointment bookings and follow-ups flawlessly.
+                Highly recommended.
+            </p>
+            <div class="client-name">Emma W.</div>
+            <div class="client-role">Director, Healthcare Services</div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">
+                Adi understands automation at a strategic level, not just technical.
+                He helped us redesign our entire lead pipeline using AI and automation.
+                Exceptional value and professionalism.
+            </p>
+            <div class="client-name">James P.</div>
+            <div class="client-role">Sales Consultant, B2B Agency</div>
+        </div>
+    </div>
+</section>
+
+    <!-- CTA -->
+    <section id="contact">
+        <div class="final-cta">
+            <h2>Let’s Automate Your Business</h2>
+            <p>
+                Need a chatbot, workflow automation, or AI-powered backend?
+                Let’s discuss your use-case.
+            </p>
+            <a href="mailto:youremail@example.com" class="cta-btn">Contact Me</a>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 • AI Automation & Full-Stack Development
+    </footer>
+
+</body>
+</html>
